@@ -1,0 +1,26 @@
+backend:
+  name: github
+  repo: yourusername/your-repo-name   # 🔴 CHANGE THIS
+  branch: main                        # or "master" depending on your repo
+
+media_folder: "images/uploads"    # where uploaded images go
+public_folder: "/images/uploads"
+
+collections:
+  - name: "site"
+    label: "Site Content"
+    files:
+      - file: "content.json"
+        label: "Main Content"
+        name: "main"
+        fields:
+          - { label: "Hero Title", name: "hero_title", widget: "string" }
+          - { label: "Hero Text", name: "hero_text", widget: "text" }
+          - { label: "Hero Button Link", name: "hero_button_link", widget: "string" }
+          - { label: "About Text", name: "about_text", widget: "text" }
+          - { label: "Service 1 Title", name: "service_1_title", widget: "string" }
+          - { label: "Service 1 Text", name: "service_1_text", widget: "text" }
+          - { label: "Service 2 Title", name: "service_2_title", widget: "string" }
+          - { label: "Service 2 Text", name: "service_2_text", widget: "text" }
+          - { label: "Service 3 Title", name: "service_3_title", widget: "string" }
+          - { label: "Service 3 Text", name: "service_3_text", widget: "text" }
