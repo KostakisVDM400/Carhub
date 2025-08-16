@@ -1,10 +1,10 @@
 backend:
   name: github
-  repo: yourusername/yourrepo  # 👉 replace with your GitHub repo
+  repo: KostakisVDM400/Carhub   # your repo name
   branch: main
 
-media_folder: "uploads"    # where images will go in repo
-public_folder: "/uploads"  # public path for images
+media_folder: "uploads"
+public_folder: "/uploads"
 
 collections:
   - name: "content"
@@ -17,3 +17,15 @@ collections:
           - { label: "Hero Title", name: "hero_title", widget: "string" }
           - { label: "Hero Text", name: "hero_text", widget: "text" }
           - { label: "About Text", name: "about_text", widget: "text" }
+
+          - { label: "Service 1 Title", name: "service1_title", widget: "string" }
+          - { label: "Service 1 Text", name: "service1_text", widget: "text" }
+          - { label: "Service 2 Title", name: "service2_title", widget: "string" }
+          - { label: "Service 2 Text", name: "service2_text", widget: "text" }
+          - { label: "Service 3 Title", name: "service3_title", widget: "string" }
+          - { label: "Service 3 Text", name: "service3_text", widget: "text" }
+
+          - { label: "Phone", name: "phone", widget: "string" }
+          - { label: "Email", name: "email", widget: "string" }
+          - { label: "Address", name: "address", widget: "string" }
+          - { label: "Footer", name: "footer_text", widget: "string" }
