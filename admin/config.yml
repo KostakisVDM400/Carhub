@@ -1,9 +1,9 @@
 backend:
   name: github
-  repo: yourusername/your-repo-name   # 🔴 CHANGE THIS
-  branch: main                        # or "master" depending on your repo
+  repo: yourusername/your-repo    # 🔴 change this
+  branch: main
 
-media_folder: "images/uploads"    # where uploaded images go
+media_folder: "images/uploads"
 public_folder: "/images/uploads"
 
 collections:
