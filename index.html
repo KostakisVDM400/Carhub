@@ -21,13 +21,13 @@
     /* ========== Header ========== */
     .header-bar {
       background: #3a3c3f;
-      padding: 0.5rem 1.5rem; /* slimmer top bar */
+      padding: 0.5rem 1.5rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
     }
     .logo img {
-      height: 50px; /* slightly smaller logo for slimmer bar */
+      height: 50px;
       width: auto;
     }
     .nav-links {
@@ -112,7 +112,7 @@
       .services { grid-template-columns: repeat(2, 1fr); }
     }
     @media (min-width: 1024px) {
-      .header-bar { padding: 0.75rem 3rem; } /* keep slim but balanced on big screens */
+      .header-bar { padding: 0.75rem 3rem; }
       .hero { padding: 6rem 4rem; }
       .hero h1 { font-size: 3.5rem; }
       .hero p { font-size: 1.25rem; }
@@ -129,9 +129,9 @@
         gap: 1rem;
       }
       html, body {
-  max-width: 100%;
-  overflow-x: hidden;
-}
+        max-width: 100%;
+        overflow-x: hidden;
+      }
     }
   </style>
 </head>
@@ -149,15 +149,15 @@
 
   <!-- Hero -->
   <header class="hero">
-    <h1>Καλώς ήρθατε στην CarHub</h1>
-    <p>Πολυτελή και αποκλειστικά αυτοκίνητα με έμφαση στην ποιότητα, την αξιοπιστία και την εμπειρία.</p>
-    <a href="https://carhub.car.gr" class="btn">Τα Αυτοκίνητά μας!</a>
+    <h1 id="hero-title"></h1>
+    <p id="hero-text"></p>
+    <a id="hero-button" href="#" class="btn">Τα Αυτοκίνητά μας!</a>
   </header>
 
   <!-- About -->
   <section id="about">
     <h2>Σχετικά με την CarHub</h2>
-    <p>Η CarHub εξειδικεύεται σε πολυτελή και αποκλειστικά αυτοκίνητα, παρέχοντας στους πελάτες την καλύτερη δυνατή εμπειρία αγοράς...</p>
+    <p id="about-text"></p>
   </section>
 
   <!-- Services -->
@@ -165,16 +165,16 @@
     <h2>Οι Υπηρεσίες μας</h2>
     <div class="services">
       <div class="service-box">
-        <h3>Πώληση Αυτοκινήτων</h3>
-        <p>Πολυτελή αυτοκίνητα υψηλής ποιότητας για απαιτητικούς οδηγούς.</p>
+        <h3 id="service1-title"></h3>
+        <p id="service1-text"></p>
       </div>
       <div class="service-box">
-        <h3>Ανταλλαγές</h3>
-        <p>Ανταλλάξτε το παλιό σας όχημα με νέο, εύκολα και γρήγορα.</p>
+        <h3 id="service2-title"></h3>
+        <p id="service2-text"></p>
       </div>
       <div class="service-box">
-        <h3>Χρηματοδότηση</h3>
-        <p>Ευέλικτα προγράμματα χρηματοδότησης για κάθε ανάγκη.</p>
+        <h3 id="service3-title"></h3>
+        <p id="service3-text"></p>
       </div>
     </div>
   </section>
@@ -196,5 +196,28 @@
   <footer>
     &copy; 2025 CarHub. Όλα τα δικαιώματα διατηρούνται.
   </footer>
+
+  <!-- Load content.json dynamically -->
+  <script>
+    fetch("content.json")
+      .then(response => response.json())
+      .then(data => {
+        document.getElementById("hero-title").textContent = data.hero_title;
+        document.getElementById("hero-text").textContent = data.hero_text;
+        document.getElementById("hero-button").href = data.hero_button_link;
+
+        document.getElementById("about-text").textContent = data.about_text;
+
+        document.getElementById("service1-title").textContent = data.service_1_title;
+        document.getElementById("service1-text").textContent = data.service_1_text;
+
+        document.getElementById("service2-title").textContent = data.service_2_title;
+        document.getElementById("service2-text").textContent = data.service_2_text;
+
+        document.getElementById("service3-title").textContent = data.service_3_title;
+        document.getElementById("service3-text").textContent = data.service_3_text;
+      });
+  </script>
+
 </body>
 </html>
