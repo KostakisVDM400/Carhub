@@ -1,0 +1,19 @@
+backend:
+  name: github
+  repo: yourusername/yourrepo  # 👉 replace with your GitHub repo
+  branch: main
+
+media_folder: "uploads"    # where images will go in repo
+public_folder: "/uploads"  # public path for images
+
+collections:
+  - name: "content"
+    label: "Site Content"
+    files:
+      - file: "content.json"
+        label: "Main Texts"
+        name: "main"
+        fields:
+          - { label: "Hero Title", name: "hero_title", widget: "string" }
+          - { label: "Hero Text", name: "hero_text", widget: "text" }
+          - { label: "About Text", name: "about_text", widget: "text" }
