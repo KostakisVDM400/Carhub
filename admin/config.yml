@@ -1,8 +1,9 @@
 backend:
-  name: git-gateway
-  branch: main   # or "master" if your repo uses that
+  name: github
+  repo: KostakisVDM400/Carhub   # replace with your GitHub username/repo name
+  branch: main
 
-media_folder: "images/uploads"   # where uploaded images go in repo
+media_folder: "images/uploads"
 public_folder: "/images/uploads"
 
 collections:
