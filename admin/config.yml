@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: KostakisVDM400/Carhub   # replace with your GitHub username/repo name
+  repo: YourUserName/YourRepoName
   branch: main
 
 media_folder: "images/uploads"
