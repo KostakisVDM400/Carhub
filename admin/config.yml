@@ -1,18 +1,17 @@
 backend:
   name: git-gateway
-  branch: main   # your repo branch name
+  branch: main   # or "master" if your repo uses that
 
-media_folder: "uploads"
-public_folder: "/uploads"
+media_folder: "images/uploads"   # where uploaded images go in repo
+public_folder: "/images/uploads"
 
 collections:
-  - name: "content"
-    label: "Site Content"
+  - name: "pages"
+    label: "Pages"
     files:
-      - file: "index.html"
-        label: "Homepage"
-        name: "homepage"
+      - file: "content.json"
+        label: "Site Content"
+        name: "content"
         fields:
-          - { label: "Hero Title", name: "hero_title", widget: "string" }
-          - { label: "Hero Text", name: "hero_text", widget: "text" }
-          - { label: "About Text", name: "about_text", widget: "text" }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Description", name: "description", widget: "text" }
